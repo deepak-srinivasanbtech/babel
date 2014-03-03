@@ -1,0 +1,5 @@
+name=Device
+description= Custom Module to Create Read Update Delete and View Mobile Devices
+core= 7.x
+version="7.x-1.x-dev"
+package="Nokia Android Devices"

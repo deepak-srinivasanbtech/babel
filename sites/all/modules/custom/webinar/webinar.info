@@ -1,0 +1,4 @@
+name=Webinar
+description= webinar module to create webinars, users can subscribe and unsubscribe from webinar etc
+core=7.x
+package="Nokia Android Devices"

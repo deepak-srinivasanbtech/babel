@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Wiki Custom feature.
+ */
+
+include_once('wiki_custom.features.inc');

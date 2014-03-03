@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Performs a standard Drupal installation with additional configuration of the
+ * Drupal Wiki modules and components.
+ */
+// Define some Drupal Wiki specific components.
+define('WIKI_DEFAULT_THEME', 'bartik');
+define('WIKI_ADMIN_THEME', 'seven');
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ */
+function drupal_wiki_install() {
+
+  include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
+  standard_install();
+
+  // Add DDefault page
+  $node = new stdClass();
+  $node->title = "Wiki Page";
+  $node->type = "wiki";
+  node_object_prepare($node); // Sets some defaults. Invokes hook_prepare() and hook_node_prepare().
+  $node->language = LANGUAGE_NONE; // Or e.g. 'en' if locale is enabled
+  $node->uid = $user->uid;
+  $node->status = 1; //(1 or 0): published or not
+  $node->promote = 1; //(1 or 0): promoted to front page
+  
+  $node->body = "<p>A node</p><p>A node which is a wiki page post with lots of stuff</p>
+                 <p>[[Second Wiki Page|page2]]</p>";
+  node_save($node);
+  
+}
