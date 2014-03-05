@@ -72,21 +72,25 @@ function wysiwyg_ckeditor_version($editor) {
   if (!file_exists($library)) {
     return;
   }
-  $library = fopen($library, 'r');
-  $max_lines = 8;
-  while ($max_lines && $line = fgets($library, 500)) {
-    // version:'CKEditor 3.0 SVN',revision:'3665'
-    // version:'3.0 RC',revision:'3753'
-    // version:'3.0.1',revision:'4391'
-    if (preg_match('@version:\'(?:CKEditor )?([\d\.]+)(?:.+revision:\'([\d]+))?@', $line, $version)) {
-      fclose($library);
-      // Version numbers need to have three parts since 3.0.1.
-      $version[1] = preg_replace('/^(\d+)\.(\d+)$/', '${1}.${2}.0', $version[1]);
-      return $version[1] . '.' . $version[2];
-    }
-    $max_lines--;
-  }
-  fclose($library);
+  //Deepak Srinivasan has altered this code to return the version of ckeditor he is using
+  //since it is unnecessary to read the verison ckeditor.js 
+  //and several versions ckeditor do not have version id in their js file. 
+  return '4.3.3';
+//  $library = fopen($library, 'r');
+//  $max_lines = 8;
+//  while ($max_lines && $line = fgets($library, 500)) {
+//    // version:'CKEditor 3.0 SVN',revision:'3665'
+//    // version:'3.0 RC',revision:'3753'
+//    // version:'3.0.1',revision:'4391'
+//    if (preg_match('@version:\'(?:CKEditor )?([\d\.]+)(?:.+revision:\'([\d]+))?@', $line, $version)) {
+//      fclose($library);
+//      // Version numbers need to have three parts since 3.0.1.
+//      $version[1] = preg_replace('/^(\d+)\.(\d+)$/', '${1}.${2}.0', $version[1]);
+//      return $version[1] . '.' . $version[2];
+//    }
+//    $max_lines--;
+//  }
+//  fclose($library);
 }
 
 /**
