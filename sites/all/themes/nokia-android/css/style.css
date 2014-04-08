@@ -1,12 +1,99 @@
-/* 
-    Document   : layout
-    Created on : Mar 3, 2014, 4:26:34 PM
-    Author     : deepaksrini
-    Description:
-        Purpose of the stylesheet follows.
-*/
-
-root { 
-    display: block;
+/* for changin color of the nav bar **/
+.dee-navbar-top-nav {
+    background-color: #124191;
+    border-color: #124191;
+    min-height: 60px;
+}
+.dee-navbar-top-nav .navbar-brand {
+    color: #ecf0f1;
+}
+.dee-navbar-top-nav .navbar-brand:hover, .dee-navbar-top-nav .navbar-brand:focus {
+    color: #FFFFCC;
+}
+.dee-navbar-top-nav .navbar-text {
+    color: #FFFFCC;
+}
+.dee-navbar-top-nav .navbar-nav > li > a {
+    color: #FFFFCC;
+}
+.dee-navbar-top-nav .navbar-nav > li > a:hover, .dee-navbar-top-nav .navbar-nav > li > a:focus {
+    color: #FFFFCC;
+}
+.dee-navbar-top-nav .navbar-nav > .active > a, .dee-navbar-top-nav .navbar-nav > .active > a:hover, .dee-navbar-top-nav .navbar-nav > .active > a:focus {
+    color: #0033CC;
+    background-color: #FFFFFF;
+}
+.dee-navbar-top-nav .navbar-nav > .open > a, .dee-navbar-top-nav .navbar-nav > .open > a:hover, .dee-navbar-top-nav .navbar-nav > .open > a:focus {
+    color: #ecdbff;
+    background-color: #FFFFFF;
+}
+.dee-navbar-top-nav .navbar-toggle {
+    border-color: #FFFFFF;
+}
+.dee-navbar-top-nav .navbar-toggle:hover, .dee-navbar-top-nav .navbar-toggle:focus {
+    background-color: #FFFFFF;
+}
+.dee-navbar-top-nav .navbar-toggle .icon-bar {
+    background-color: #ecf0f1;
+}
+.dee-navbar-top-nav .navbar-collapse,
+.dee-navbar-top-nav .navbar-form {
+    border-color: #ecf0f1;
+}
+.dee-navbar-top-nav .navbar-link {
+    color: #ecf0f1;
+}
+.dee-navbar-top-nav .navbar-link:hover {
+    color: #ecdbff;
 }
 
+@media (max-width: 767px) {
+    .dee-navbar-top-nav .navbar-nav .open .dropdown-menu > li > a {
+        color: #ecf0f1;
+    }
+    .dee-navbar-top-nav .navbar-nav .open .dropdown-menu > li > a:hover, .dee-navbar-top-nav .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #ecdbff;
+    }
+    .dee-navbar-top-nav .navbar-nav .open .dropdown-menu > .active > a, .dee-navbar-top-nav .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-top-nav .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #ecdbff;
+        background-color: #FFFFFF;
+    }
+}
+/** for changing th color of the nav bar **/
+/** for changing the widht of the nav bar **/
+.navbar-fixed-top {
+    min-height: 80px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+.dee-navbar-actions-bar{
+    background-color: #202065;
+    border-color: #202065;
+    margin-bottom: 0;
+    min-height: 30px;
+}
+.dee-navbar-actions-bar .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;}
+}
+/** for chaning the widht of the nav bar **/
+.dee-page-content{
+    min-height: 400px; 
+}
+
+.dee-footer{
+      background-color: #124191;
+          min-height: 80px;
+}
