@@ -1,0 +1,6 @@
+name = Nokia Android Core Extension
+description = "Nokia Android Core Extension"
+package = "Nokia Android"
+core = 7.x
+version =7.x
+dependency[] = modal_form

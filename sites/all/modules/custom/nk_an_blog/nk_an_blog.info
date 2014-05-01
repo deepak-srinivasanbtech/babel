@@ -1,0 +1,4 @@
+name = Blog
+description = Blog page views and services
+package = Nokia Android
+core = 7.x-1.x

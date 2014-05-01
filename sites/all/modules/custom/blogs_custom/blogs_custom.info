@@ -1,5 +1,0 @@
-name= Blog Customization Module
-description=A custom module to extend the functionality of core blog module providing view pages etc
-core=7.x
-version= "7.x-1.x-dev"
-package="Nokia Android Devices"

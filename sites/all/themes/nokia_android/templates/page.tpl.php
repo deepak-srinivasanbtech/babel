@@ -64,7 +64,6 @@
  * @see template_process()
  */
 ?>
-<!--
 <div class="row">
     <?php print render($page['top_actions_bar']); ?>
 </div>
@@ -137,61 +136,7 @@
         </div>
     </div>
 </div>
---!>
-<html>
-	<head>
-		<meta content="IE=edge" http-equiv="X-UA-Compatible">
-		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="custom/custom.css">
 
-		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		
-	</head>
-	<body>
-	
-	
-		<div class="navbar navbar-default " role="banner">
-				<div class="container">
-					<div class="navbar-header">
-						<button  type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand text-centered" href="#"><b>Nokia Andriod</b></a>
-					</div>
-					<div class="navbar-collapse collapse " id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav" >
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#">News</a></li>
-							<!--li class="dropdown">
-							  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-							  <ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Separated link</a></li>
-								<li class="divider"></li>
-								<li><a href="#">One more separated link</a></li>
-							  </ul>
-							</li>-->
-							<li><a href="#" >Videos</a></li>
-							<li><a href="#">Tutorials</a></li>
-							<li><a href="#">Apps</a></li>
-							<li><a href="#">Devices</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-
-	
-	</body>
-</html>
 
 
 

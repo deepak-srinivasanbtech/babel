@@ -2,7 +2,7 @@
 .dee-navbar-top-nav {
     background-color: #124191;
     border-color: #124191;
-    min-height: 60px;
+    min-height: 40px;
 }
 .dee-navbar-top-nav .navbar-brand {
     color: #ecf0f1;
@@ -17,7 +17,8 @@
     color: #FFFFCC;
 }
 .dee-navbar-top-nav .navbar-nav > li > a:hover, .dee-navbar-top-nav .navbar-nav > li > a:focus {
-    color: #FFFFCC;
+    color: #0033CC;
+     background-color: #E6E6E6;
 }
 .dee-navbar-top-nav .navbar-nav > .active > a, .dee-navbar-top-nav .navbar-nav > .active > a:hover, .dee-navbar-top-nav .navbar-nav > .active > a:focus {
     color: #0033CC;
@@ -68,14 +69,14 @@
 .navbar-nav > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
-    line-height: 80px;
+    line-height: 50px ;
 }
 
 .dee-navbar-actions-bar{
     background-color: #202065;
     border-color: #202065;
     margin-bottom: 0;
-    min-height: 30px;
+    min-height: 10px;
 }
 .dee-navbar-actions-bar .navbar-brand {
     padding-top: 0px;
@@ -97,3 +98,36 @@
       background-color: #124191;
           min-height: 80px;
 }
+.dee-navbar-brand{
+    padding : 17px;
+} 
+/** Image **/
+.dee-anchor-color{
+    color: #428BCA;
+}
+body {
+    background: none repeat scroll 0 0 #F2F2F2;
+}
+/* Home page panes **/
+
+.dee-home-pane-wrapper{
+    background: none repeat scroll 0 0 #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    
+}
+.dee-home-pane-wrapper-header{
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 9px;
+    
+}
+.dee-home-pane-wrapper-content{
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+/* Home page panes **/
+/** custom css **/
+

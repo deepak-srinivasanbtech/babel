@@ -1,0 +1,5 @@
+name = Home
+description = Home page views and services
+package = Nokia Android
+core = 7.x
+version = 7.x-1.x

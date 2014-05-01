@@ -1,0 +1,4 @@
+name = Video
+description = Video page views and services
+package = Nokia Android
+core = 7.x-1.x

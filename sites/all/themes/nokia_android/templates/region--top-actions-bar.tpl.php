@@ -1,35 +1,29 @@
 <div class="navbar dee-navbar-default dee-navbar-actions-bar" role="action">
     <div class="container">
-        <div class="navbar-header">
-            <button  type="button" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand text-centered" href="#"><b>Nokia Andriod</b></a>
+        <div class="hidden-xs row">
+            <div class="col-md-10 col-sm-10 col-lg-10">
+                
+            </div>
+            <div class="col-md-2 col-sm-2 col-lg-2">
+                <?php if (!user_is_logged_in()) { ?>
+                    <?php print ctools_modal_text_button(t('login'), 'modal_forms/nojs/login', t('Login via modal'), 'ctools-modal-modal-popup-small'); ?><span class="dee-anchor-color">/</span><?php print ctools_modal_text_button(t('register'), 'modal_forms/nojs/register', t('Login via modal'), 'ctools-modal-modal-popup-small'); ?>
+                <?php } else { ?>
+                    <?php print l('logout', 'user/logout'); ?>
+                <?php } ?>
+            </div>
         </div>
-        <div class="navbar-collapse collapse " id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav" >
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">News</a></li>
-                <!--li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>-->
-                <li><a href="#" >Videos</a></li>
-                <li><a href="#">Tutorials</a></li>
-                <li><a href="#">Apps</a></li>
-                <li><a href="#">Devices</a></li>
-            </ul>
+        <div class="hidden-sm hidden-md hidden-lg row">
+            <div class="col-xs-6">
+                
+            </div>
+            <div class="col-xs-6">
+                <?php if (!user_is_logged_in()) { ?>
+                    <?php print l('signup', 'user/register',array('attributes'=>array('class'=>array('pull-right')))); ?><span class="dee-anchor-color pull-right">/</span><?php print l('login', 'user/login',array('attributes'=>array('class'=>array('pull-right')))); ?>
+                <?php } else { ?>
+                    <?php print l('logout', 'user/logout',array('attributes'=>array('class'=>array('pull-right')))); ?>
+                <?php } ?>
+            </div>
         </div>
+        
     </div>
 </div>

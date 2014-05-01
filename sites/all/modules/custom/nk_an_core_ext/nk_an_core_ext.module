@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * Implements hook_block_info 
+ */
+function nk_an_core_ext_block_info() {
+    $blocks = array();
+    $blocks['nk_an_login_logout'] = array(
+        'info' => t('Login/Logout Block'),
+    );
+    return $blocks;
+}
+
+/**
+ * Implements hook_block_view
+ */
+function nk_an_core_ext_block_view($delta = '') {
+    $block = array();
+    switch ($delta) {
+        case 'nk_an_login_logout':
+            $block['subject'] = t('<none>');
+            $block['content'] = nk_an_core_ext_login_logout_form();
+            break;
+    }
+    return $block;
+}
+/**
+ *  logout login 
+ * @return type 
+ */
+function nk_an_core_ext_login_logout_form() {
+    $is_logged_in = user_is_logged_in();
+    $modal_links = array();
+    $redirect_link = array();
+    if (!$is_logged_in) {
+        $links[] = ctools_modal_text_button(t('login/'), 'modal_forms/nojs/login', t('Login via modal'));
+        $modal_links[] = ctools_modal_text_button(t('register'), 'modal_forms/nojs/register', t('Login via modal'), 'ctools-modal-modal-popup-small');
+        $redirect_link[] = l('login', 'login');
+        $redirect_link[] = l('login', 'user/login');
+    } else {
+        $redirect_link[] = $modal_links[] = l('logout', 'user/logout');
+    }
+    
+    $form['list_modal'] = array(
+        '#theme' => 'item_list',
+        '#items' => $modal_links,
+    );
+    $form['#theme'] = '';
+    $form['list_redirect'] = array(
+        '#theme' => 'item_list',
+        '#items' => $redirect_link,
+    );
+    
+    return $form;
+}
+
+?>

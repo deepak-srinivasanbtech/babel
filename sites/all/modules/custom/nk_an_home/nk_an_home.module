@@ -1,0 +1,98 @@
+<?php
+
+/** Start of hook function * */
+
+/**
+ * Implements hook_menu
+ */
+function nk_an_home_menu() {
+    $item['nokia-android/home'] = array(
+        'title' => 'Home',
+        'page callback' => 'nk_an_home_home_page',
+        'access arguments' => array('nokia android home'),
+        'menu_name' => 'nk_an_top_menu'
+    );
+    $item['nokia-android/app'] = array(
+        'title' => 'Apps',
+        'page callback' => 'nk_an_home_home_page',
+        'access arguments' => array('nokia android home'),
+        'menu_name' => 'nk_an_top_menu'
+    );
+    $item['nokia-android/blog'] = array(
+        'title' => 'Blog',
+        'page callback' => 'nk_an_home_home_page',
+        'access arguments' => array('nokia android home'),
+        'menu_name' => 'nk_an_top_menu'
+    );
+    $item['nokia-android/device'] = array(
+        'title' => 'Devices',
+        'page callback' => 'nk_an_home_home_page',
+        'access arguments' => array('nokia android home'),
+        'menu_name' => 'nk_an_top_menu'
+    );
+    $item['nokia-android/video'] = array(
+        'title' => 'Video',
+        'page callback' => 'nk_an_home_home_page',
+        'access arguments' => array('nokia android home'),
+        'menu_name' => 'nk_an_top_menu'
+    );
+    return $item;
+}
+
+/**
+ * Implements hook_permission
+ */
+function nk_an_home_permission() {
+    $permission['nokia android home'] = array(
+        'title' => 'Nokia Android Home'
+    );
+    return $permission;
+}
+
+/**
+ * Implements hook_theme 
+ */
+function nk_an_home_theme() {
+    $theme['nk_an_home_home_page'] = array(
+        'template' => 'nk-an-home-home-page',
+        'variables' => array('arguments' => NULL)
+    );
+    return $theme;
+}
+
+/** End of hook function * */
+
+/**
+ * URI nokia-android/home callback
+ */
+function nk_an_home_home_page() {
+    $featured = array(
+        'title' => 'Featured',
+        'data' => array('featured 1',
+            'featured 2',
+            'featured 3',
+        ),
+    );
+    $blogs = array(
+        'title' => 'Featured',
+        'data' => array('Blog 1',
+            'Blog 2',
+            'Blog 3'
+        ),
+    );
+    return theme('nk_an_home_home_page', Array(
+                'arguments' => array('featured' => $featured,
+                    'blogs' => $blogs)));
+}
+
+function test($var, $flag = true) {
+    echo "<pre>";
+    print_r($var);
+
+    echo "</pre>";
+    if ($flag) {
+        die;
+    }
+}
+
+?>
