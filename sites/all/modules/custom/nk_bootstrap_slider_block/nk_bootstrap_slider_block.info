@@ -1,0 +1,4 @@
+name = Block for Nova Slider
+description = Block of Nova Slider
+core = 7.x-1.x
+package = slider

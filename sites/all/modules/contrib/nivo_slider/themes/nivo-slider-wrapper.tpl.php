@@ -20,7 +20,7 @@
   <div class="slider-wrapper theme-<?php print $theme; ?>">
     <div class="ribbon"></div>
     <div id="slider" class="nivoSlider">
-      <?php print $banners; ?>
+      <?php print $banners;?>
     </div>
   </div>
   <?php if ($html_captions): ?>

@@ -8,6 +8,9 @@ function nk_an_core_ext_block_info() {
     $blocks['nk_an_login_logout'] = array(
         'info' => t('Login/Logout Block'),
     );
+    $blocks['nk_home_page_slider'] = array(
+        'info' => t('Home Page Slider Block'),
+    );
     return $blocks;
 }
 
@@ -21,8 +24,18 @@ function nk_an_core_ext_block_view($delta = '') {
             $block['subject'] = t('<none>');
             $block['content'] = nk_an_core_ext_login_logout_form();
             break;
+        case 'nk_home_page_slider':
+           $block['subject'] = t('<none>');
+           $block['content'] = nk_home_ext_home_page_slider();
+           break;
     }
     return $block;
+}
+
+function nk_home_ext_home_page_slider(){
+    $variable['arguments']['slider_node'] = node_load(2); 
+   
+    return theme("nk_home_slider",$variable );
 }
 /**
  *  logout login 

@@ -135,6 +135,5 @@ function nivo_slider_slider() {
 
   // Save all HTML descriptions
   variable_set('nivo_slider_banner_html_captions', $description_html);
-
   return $output;
 }
